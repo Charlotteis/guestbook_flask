@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -11,7 +11,12 @@ from models import *
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return render_template("index.html")
+
+
+@app.route("/add_post", methods=["POST"])
+def form():
+    return render_template("form.html")
 
 
 @app.route("/<name>")
