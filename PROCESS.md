@@ -9,3 +9,4 @@
 - Create a new postgres user and associate it with a new postgres database
 - Connect database within app.db using SQLAlchemy
 - Create Guestbook 'Post' model
+- Initialise, Migrate and Upgrade our Database
