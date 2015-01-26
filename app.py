@@ -10,8 +10,9 @@ from models import *
 
 
 @app.route("/")
-def hello():
-    return render_template("index.html")
+def show_posts():
+    latest_posts_list = Post.query.order_by(Post.date.desc()).limit(10)
+    return render_template("index.html", latest_posts_list=latest_posts_list)
 
 
 @app.route("/add_post", methods=["POST"])
