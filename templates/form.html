@@ -1,0 +1,34 @@
+{% extends "guestbook2/base.html" %}
+
+{% block title %}Add a post!{% endblock %}
+
+{% block navigation %}
+<a href="{% url 'guestbook2:index' %}" tabindex="1">Go back!</a>
+{% endblock %}
+
+{% block content %}
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<form method="post" action="{% url 'guestbook2:submit' %}">
+{% csrf_token %}
+
+    <label for="comment">Comment</label>
+    <br>
+    <textarea id="comment" name="comment" rows="7" cols="68" placeholder="Say something ~*~*magical*~*~" tabindex="1"></textarea>
+
+    <br>
+
+    <label for="name">Name</label><input id="name" type="text" name="name" tabindex="1">
+
+    <br>
+
+    <label for="email">Mail</label><input id="email" type="email" name="email" tabindex="1">
+
+    <br>
+
+    <label for="website">Site</label><input id="website" type="text" name="website" tabindex="1">
+
+    <br>
+
+    <input type="submit" value="Submit" tabindex="1">
+</form>
+{% endblock %}

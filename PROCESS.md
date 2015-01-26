@@ -10,3 +10,6 @@
 - Connect database within app.db using SQLAlchemy
 - Create Guestbook 'Post' model
 - Initialise, Migrate and Upgrade our Database
+- pip3 install requests for use with form.
+- Copy templates over from guestbook-2.0 (django app) to flask templates folder
+- Add static files (img, css) to flask static folder
