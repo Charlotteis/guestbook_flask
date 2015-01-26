@@ -16,3 +16,6 @@
 - Display the latest ten posts in descending order (according to date) in index
 - db.drop_table() will rid table complete. Need to create again with python3 manage.py db migrate + python3 manage.py db upgrade
 - Add links to form submission and home page in templates
+- Wrote form submission view "add_post"
+- Website URL validation with 'request' package
+- Flask port complete (refactoring and tests next)
