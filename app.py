@@ -17,13 +17,13 @@ def show_posts():
     return render_template("index.html", latest_posts_list=latest_posts_list)
 
 
-@app.route("/submit")
+@app.route("/add_post")
 def form():
     return render_template("form.html")
 
 
-@app.route("/add_post", methods=["POST"])
-def add_post():
+@app.route("/submit", methods=["POST"])
+def submit_post():
     if request.method == "POST":
         # Make sure a name has been submitted
         if request.form["name"] == "":
