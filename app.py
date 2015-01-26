@@ -15,14 +15,10 @@ def show_posts():
     return render_template("index.html", latest_posts_list=latest_posts_list)
 
 
-@app.route("/add_post", methods=["POST"])
+@app.route("/add_post", methods=["GET", "POST"])
 def form():
     return render_template("form.html")
 
-
-@app.route("/<name>")
-def hello_name(name):
-    return "Hello {0}!".format(name)
 
 if __name__ == "__main__":
     app.run()
