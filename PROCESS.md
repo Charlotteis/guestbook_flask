@@ -5,3 +5,4 @@
 26/01/2014
 ----------
 - Basic 'Hello World' Flask App
+- Install Psycopg2, Flask-SQLAlchemy & Flask-Migrate
