@@ -3,8 +3,10 @@ from datetime import datetime
 import requests
 from flask import Flask, render_template, request, redirect, url_for
 from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.seasurf import SeaSurf
 
 app = Flask(__name__)
+csrf = SeaSurf(app)
 app.config.from_object(os.environ["APP_SETTINGS"])
 db = SQLAlchemy(app)
 

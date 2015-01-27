@@ -19,3 +19,4 @@
 - Wrote form submission view "add_post"
 - Website URL validation with 'request' package
 - Flask port complete (refactoring and tests next)
+- Add CSRF Token Protection with Flask-SeaSurf
